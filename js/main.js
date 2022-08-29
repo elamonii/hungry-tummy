@@ -44,10 +44,10 @@ const loadMealsIntoDiv = mealAll =>{
         const makeCard = document.createElement('div');
         makeCard.classList.add('col');
         makeCard.innerHTML = `
-            <div onclick="loadMealDetail(${meal.idMeal})" class="card">
+            <div onclick="loadMealDetail(${meal.idMeal})" class="card rounded-2">
                 <img src="${meal.strMealThumb}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">${meal.strMeal}</h5>
+                    <h5 class="card-title text-danger">${meal.strMeal}</h5>
                     <p class="card-text">${meal.strInstructions.slice(0, 200)}</p>
                 </div>
             </div>
@@ -81,8 +81,7 @@ function viewDetailDescription(getMeal){
     makeCardDetail.classList.add('border');
     makeCardDetail.classList.add('border-0');
     makeCardDetail.innerHTML = `
-        <div class="row g-0">
-            <h3 class="text-danger text-center text-decoration-underline pt-5 pb-3 bg-dark">Cooking Instruction</h3>
+        <div class="row g-0 rounded-2">
 
 
             <div class="col-md-4">
@@ -90,7 +89,7 @@ function viewDetailDescription(getMeal){
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title">${getMeal.strMeal}</h5>
+                    <h5 class="card-title text-danger">${getMeal.strMeal} - Cooking Instruction</h5>
                     <p class="card-text">${getMeal.strInstructions}</p>
                 </div>
             </div>
